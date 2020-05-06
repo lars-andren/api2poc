@@ -1,0 +1,38 @@
+openapi: 3.0.0
+info:
+  title: API2
+  description: Everything.
+  version: 0.1.9
+
+servers:
+  - url: localhost:8080
+    description: a machine near you
+  - url: https://staging.cloudcharge.se
+    description: internal server for testing
+
+paths:
+  /connectors:
+    get:
+      summary: all connectors
+      responses:
+        '200':
+          description: A JSON array of connectorIDs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /chargepoints:
+    get:
+      summary: all chargepoints
+      responses:
+        '200':
+          description: A JSON array of chargepointIDs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+

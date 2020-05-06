@@ -1,0 +1,14 @@
+type Query {
+  chargepointById(id: ID): Chargepoint
+}
+
+type Chargepoint {
+  id: ID
+  name: String
+  connector: Connector
+}
+
+type Connector {
+  id: ID
+  socketType: String
+}
